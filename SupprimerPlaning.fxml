@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane prefHeight="317.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projetbd2.SupprimerPlaningController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="571.0" minWidth="10.0" prefWidth="321.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="617.0" minWidth="10.0" prefWidth="369.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <VBox alignment="TOP_RIGHT" prefHeight="442.0" prefWidth="349.0" GridPane.columnIndex="1">
+         <children>
+            <HBox>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tache" wrappingWidth="128.87890625" />
+                  <TextField fx:id="tache" editable="false" />
+               </children>
+               <VBox.margin>
+                  <Insets top="8.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="25.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Creneau" wrappingWidth="128.87890625" />
+                  <TextField fx:id="horaire" editable="false">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets top="18.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="140.0" prefWidth="374.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Description tache" wrappingWidth="128.87890625" />
+                  <TextArea fx:id="descTache" editable="false" prefHeight="144.0" prefWidth="197.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </TextArea>
+               </children>
+               <VBox.margin>
+                  <Insets top="18.0" />
+               </VBox.margin>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#deleteAction" text="Supprimer  planing">
+               <graphic>
+                  <FontAwesomeIcon fill="#b90303" glyphName="CLOSE" size="18px" />
+               </graphic>
+               <VBox.margin>
+                  <Insets right="8.0" top="18.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <VBox>
+         <children>
+            <HBox prefHeight="25.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date" wrappingWidth="128.87890625" />
+                  <ComboBox fx:id="date" onAction="#dateAction" prefWidth="150.0" promptText="Selectionner la date" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="8.0" top="8.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="25.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Id Employe" wrappingWidth="128.87890625" />
+                  <ComboBox fx:id="idEmploye" onAction="#idEmployeAction" prefWidth="150.0" promptText="Selectionner l'identifiant" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="8.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nom emloye" wrappingWidth="128.87890625" />
+                  <TextField fx:id="nomEmploye" editable="false">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="8.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Prenom Employe" wrappingWidth="128.87890625" />
+                  <TextField fx:id="prenomEmploye" editable="false" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="8.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Adresse Employe" wrappingWidth="128.87890625" />
+                  <TextField fx:id="adresseEmploye" editable="false" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="8.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date embauche " wrappingWidth="128.87890625" />
+                  <TextField fx:id="dateEmbauche" editable="false" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="8.0" />
+               </VBox.margin>
+            </HBox>
+            <Label fx:id="status" alignment="CENTER" prefHeight="38.0" prefWidth="397.0" textFill="#17b536">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font></Label>
+         </children>
+      </VBox>
+   </children>
+</GridPane>

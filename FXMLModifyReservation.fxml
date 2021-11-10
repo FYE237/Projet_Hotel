@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="744.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projetbd2.FXMLModifyReservationController">
+    <stylesheets>
+        <URL value="@fxmlmodifyreservation.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="408.0" prefWidth="744.0" styleClass="mainFxmlClass" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <stylesheets>
+            <URL value="@enregistrementpage.css" />
+         </stylesheets>
+         <children>
+            <JFXTextField fx:id="MRnumeroChambre" layoutX="155.0" layoutY="92.0" prefHeight="25.0" prefWidth="175.0" />
+            <Label fx:id="TitreMod" layoutX="21.0" layoutY="14.0" text="Modification de Réservation">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="MRdateA" layoutX="477.0" layoutY="93.0" prefHeight="25.0" prefWidth="146.0" />
+            <DatePicker fx:id="MRdateD" layoutX="477.0" layoutY="128.0" prefHeight="25.0" prefWidth="146.0" />
+            <Line endX="600.0" layoutX="117.0" layoutY="39.0" startX="-100.0" />
+            <VBox layoutX="31.0" layoutY="67.0" prefHeight="139.0" prefWidth="132.0" spacing="15.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="N° de réservation :" />
+                  <Label layoutX="10.0" layoutY="10.0" text="N° de chambre  :" />
+                  <Label text="Type de chambre :" />
+                  <Label text="Formule :" />
+                  <Label layoutX="10.0" layoutY="44.0" text="Mode de paiement :" />
+                  <Label layoutX="10.0" layoutY="117.0" text="Prix de la chambre :" />
+               </children>
+            </VBox>
+            <Text layoutX="27.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description :" />
+            <JFXTextField fx:id="MRnom" layoutX="478.0" layoutY="59.0" prefHeight="25.0" prefWidth="184.0" />
+            <VBox layoutX="372.0" layoutY="68.0" prefHeight="178.0" prefWidth="100.0" spacing="15.0">
+               <children>
+                  <Label text="Nom du client  :" />
+                  <Label text="Date d'arrivée :" />
+                  <Label text="Date de Depart :" />
+                  <Label layoutX="10.0" layoutY="10.0" text="Nombre de nuits :" />
+               </children>
+            </VBox>
+            <TextField fx:id="MRnbnuit" layoutX="479.0" layoutY="162.0" />
+            <TextField fx:id="MRdesc" layoutX="155.0" layoutY="259.0" prefHeight="72.0" prefWidth="498.0" />
+            <TextField fx:id="MRprix" layoutX="156.0" layoutY="221.0" />
+            <Button fx:id="EnregistrerM" layoutX="502.0" layoutY="367.0" mnemonicParsing="false" onAction="#EnregistreM" prefHeight="25.0" prefWidth="97.0" text="Enregistrer">
+               <graphic>
+                  <FontAwesomeIcon fx:id="SaveFont" fill="#090472" glyphName="SAVE" />
+               </graphic>
+            </Button>
+            <Button fx:id="AnnulerM" layoutX="611.0" layoutY="367.0" mnemonicParsing="false" onAction="#AnnuleM" prefHeight="25.0" prefWidth="85.0" text="Annuler">
+               <graphic>
+                  <FontAwesomeIcon fill="#f50202" glyphName="CLOSE" />
+               </graphic>
+            </Button>
+            <Text fill="#e40505" layoutX="155.0" layoutY="90.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Désolé, la valeur d'un champ est invalide" wrappingWidth="230.0000014156103" />
+            <Button fx:id="MRcalcul" layoutX="654.0" layoutY="162.0" mnemonicParsing="false" onAction="#MRcaluculer" prefHeight="25.0" prefWidth="66.0" text="calcul" />
+            <ComboBox fx:id="MRnresev" layoutX="155.0" layoutY="65.0" onAction="#MRAuto" prefWidth="150.0" />
+            <ComboBox fx:id="MRtype" layoutX="155.0" layoutY="128.0" onAction="#Mprix" prefWidth="150.0" />
+            <ComboBox fx:id="MRformule" layoutX="156.0" layoutY="160.0" prefWidth="150.0" />
+            <ComboBox fx:id="MRmode" layoutX="157.0" layoutY="190.0" prefWidth="150.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

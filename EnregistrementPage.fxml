@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="408.0" prefWidth="744.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projetbd2.EnregistrementPageController">
+    <stylesheets>
+        <URL value="@enregistrementpage.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="21.0" layoutY="14.0" text="Réservation">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="FRdateA" layoutX="477.0" layoutY="97.0" prefHeight="25.0" prefWidth="146.0" />
+      <DatePicker fx:id="FRdateD" layoutX="477.0" layoutY="129.0" prefHeight="25.0" prefWidth="146.0" />
+      <Line endX="600.0" layoutX="117.0" layoutY="39.0" startX="-100.0" />
+      <VBox layoutX="31.0" layoutY="67.0" prefHeight="139.0" prefWidth="132.0" spacing="15.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="N° de réservation :" />
+            <Label layoutX="10.0" layoutY="10.0" text="N° de chambre  :" />
+            <Label text="Type de chambre :" />
+            <Label text="Formule :" />
+            <Label layoutX="10.0" layoutY="44.0" text="Mode de paiement :" />
+            <Label layoutX="10.0" layoutY="117.0" text="Prix de la chambre :" />
+         </children>
+      </VBox>
+      <Text layoutX="27.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description :" />
+      <JFXTextField fx:id="FRnomclient" layoutX="478.0" layoutY="63.0" prefHeight="25.0" prefWidth="184.0" />
+      <VBox layoutX="372.0" layoutY="68.0" prefHeight="178.0" prefWidth="100.0" spacing="15.0">
+         <children>
+            <Label text="Nom du client  :" />
+            <Label text="Date d'arrivée :" />
+            <Label text="Date de Depart :" />
+            <Label layoutX="10.0" layoutY="10.0" text="Nombre de nuits :" />
+         </children>
+      </VBox>
+      <TextField fx:id="FRnbnuit" layoutX="479.0" layoutY="160.0" />
+      <TextField fx:id="FRdescription" layoutX="155.0" layoutY="259.0" prefHeight="72.0" prefWidth="498.0" />
+      <TextField fx:id="FRprix" layoutX="156.0" layoutY="231.0" />
+      <Button fx:id="FRcalcul" layoutX="524.0" layoutY="196.0" mnemonicParsing="false" onAction="#Calculer" prefHeight="25.0" prefWidth="67.0" text="Calcul" />
+      <Button fx:id="FRbtnenreg" layoutX="502.0" layoutY="367.0" mnemonicParsing="false" onAction="#EnregistrerReserv" prefHeight="25.0" prefWidth="97.0" text="Enregistrer">
+         <graphic>
+            <FontAwesomeIcon fill="#090472" glyphName="SAVE" />
+         </graphic>
+      </Button>
+      <Button fx:id="FRannuler" layoutX="611.0" layoutY="367.0" mnemonicParsing="false" onAction="#AnnulerReserv" prefHeight="25.0" prefWidth="85.0" text="Annuler">
+         <graphic>
+            <FontAwesomeIcon fill="#f50202" glyphName="CLOSE" />
+         </graphic>
+      </Button>
+      <Text fx:id="RnreservAlaert" fill="#e40505" layoutX="74.0" layoutY="384.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Désolé, la valeur d'un champ est invalide" wrappingWidth="230.0000014156103" />
+      <Text fx:id="FRerreur" fill="#eb0808" layoutX="60.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Veillez remplir tous les champs avant d'enregistrer" wrappingWidth="299.13671875" />
+      <JFXTextField fx:id="FRNreserv" layoutX="157.0" layoutY="63.0" prefHeight="25.0" prefWidth="175.0" />
+      <ComboBox fx:id="FRbnchambre" layoutX="154.0" layoutY="97.0" onAction="#FRnCprix" prefWidth="150.0" />
+      <ComboBox fx:id="FRtypeChambre" layoutX="156.0" layoutY="129.0" onAction="#typeChambre" prefWidth="150.0" />
+      <ComboBox fx:id="FRformule" layoutX="154.0" layoutY="160.0" onAction="#Formule" prefWidth="150.0" />
+      <ComboBox fx:id="FRmodepaie" layoutX="156.0" layoutY="192.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
