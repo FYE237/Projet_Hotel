@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="566.0" prefWidth="521.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projetbd2.FXMLSClientController">
+    <stylesheets>
+        <URL value="@fxmlsclient.css" />
+    </stylesheets>
+   <children>
+      <FontAwesomeIcon fill="#0d3d5d" glyphName="USER_TIMES" layoutX="233.0" layoutY="51.0" size="4em" text="" />
+      <Text fill="#0d3d5d" layoutX="163.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Supprimer Client" wrappingWidth="192.13671875">
+         <font>
+            <Font name="Trebuchet MS Bold" size="24.0" />
+         </font>
+      </Text>
+      <Line endX="100.0" layoutX="257.0" layoutY="104.0" startX="-100.0" />
+      <Line endX="100.0" layoutX="260.0" layoutY="67.0" startX="-100.0" />
+      <VBox layoutX="34.0" layoutY="135.0" prefHeight="284.0" prefWidth="119.0" spacing="12.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nom* :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sexe* :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tel* :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nationalité* :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Adresse* :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pièce d'identité* :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ville* :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Type de client :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fafbfc" height="5.0" layoutY="479.0" stroke="BLACK" strokeType="INSIDE" width="520.0" />
+      <JFXTextField fx:id="SupTel" layoutX="163.0" layoutY="198.0" prefHeight="25.0" prefWidth="176.0" />
+      <JFXTextField fx:id="SupNationalite" layoutX="165.0" layoutY="234.0" prefHeight="25.0" prefWidth="176.0" />
+      <JFXTextField fx:id="SupAdress" layoutX="167.0" layoutY="269.0" prefHeight="25.0" prefWidth="176.0" />
+      <JFXTextField fx:id="SupEmail" layoutX="169.0" layoutY="302.0" prefHeight="25.0" prefWidth="176.0" />
+      <JFXTextField fx:id="SupNPI" layoutX="346.0" layoutY="339.0" />
+      <JFXTextField fx:id="SupVille" layoutX="166.0" layoutY="370.0" prefHeight="25.0" prefWidth="186.0" />
+      <ComboBox fx:id="SupType" layoutX="167.0" layoutY="408.0" prefWidth="150.0" />
+      <ComboBox fx:id="SupAuto" layoutX="160.0" layoutY="132.0" onAction="#SupAutomatique" prefHeight="25.0" prefWidth="186.0" />
+      <ComboBox fx:id="SupSexe" layoutX="162.0" layoutY="167.0" prefHeight="25.0" prefWidth="123.0" />
+      <ComboBox fx:id="SupPI" layoutX="169.0" layoutY="339.0" prefHeight="25.0" prefWidth="113.0" />
+      <Text layoutX="308.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N° :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="SupTextAlert" fill="#f20b0b" layoutX="81.0" layoutY="516.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Veillez selectionner un client !!" wrappingWidth="164.99999959766865" />
+      <Button fx:id="SupClientValide" layoutX="314.0" layoutY="515.0" mnemonicParsing="false" onAction="#SupValider" prefHeight="28.0" prefWidth="70.0" style="-fx-background-color: #0bcc4f;" text="Valider" textFill="#f8f8f8">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="SupClientAnnuler" layoutX="396.0" layoutY="516.0" mnemonicParsing="false" onAction="#SupAnnuler" prefHeight="28.0" prefWidth="77.0" text="Annuler">
+         <graphic>
+            <FontAwesomeIcon fill="#f21010" glyphName="CLOSE" />
+         </graphic>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Text fx:id="Supnonvalide" fill="#eb0808" layoutX="34.0" layoutY="533.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Désolé, vous ne pouvez pas supprimer ce client  !!!" wrappingWidth="299.13671875" />
+   </children>
+</AnchorPane>

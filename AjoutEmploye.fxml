@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="729.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projetbd2.AjoutEmployeController">
+   <children>
+      <AnchorPane layoutY="26.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="729.0" style="-fx-background-color: #8177AA;">
+         <children>
+            <Pane layoutX="-2.0" prefHeight="101.0" prefWidth="703.0">
+               <children>
+                  <VBox alignment="CENTER" layoutX="208.0" prefHeight="81.0" prefWidth="286.0">
+                     <children>
+                        <FontAwesomeIcon glyphName="USER_PLUS" size="5em" />
+                        <Label prefHeight="21.0" prefWidth="287.0" text="FORMULAIRE D'AJOUT D'UN EMPLOYE" textFill="#d00101">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7210a8" height="6.0" layoutY="84.0" stroke="BLACK" strokeType="INSIDE" width="703.0" />
+               </children>
+            </Pane>
+            <VBox layoutX="190.0" layoutY="96.0" prefHeight="301.0" prefWidth="129.0">
+               <children>
+                  <GridPane prefHeight="273.0" prefWidth="129.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="59.0" minWidth="10.0" prefWidth="11.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="118.0" minWidth="10.0" prefWidth="118.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="54.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="46.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="61.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="90.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="94.0" minHeight="10.0" prefHeight="68.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <JFXTextField fx:id="Id_Box" GridPane.columnIndex="1" />
+                        <JFXTextField fx:id="Nom_Box" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <JFXTextField fx:id="Prenom_Box" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <ComboBox fx:id="Box_Sex" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <children>
+                              <JFXTextField fx:id="Piece_Id" />
+                           </children>
+                        </VBox>
+                        <Label fx:id="lblObg1" prefHeight="27.0" prefWidth="0.0" text="*" textFill="RED">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblObg11" prefHeight="27.0" prefWidth="0.0" text="*" textFill="RED" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="4">
+                           <children>
+                              <Label fx:id="lblObg111" prefHeight="27.0" prefWidth="0.0" text="*" textFill="RED">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <JFXTextField fx:id="Adresse_Box" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" layoutX="372.0" layoutY="101.0" prefHeight="257.0" prefWidth="139.0" spacing="40.0">
+               <children>
+                  <Label text="Mot de Passe :">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="139.0" text="Poste Occupé :">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="147.0" text="Date d'embauche :">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox layoutX="534.0" layoutY="101.0" prefHeight="257.0" prefWidth="120.0">
+               <children>
+                  <GridPane prefHeight="209.0" prefWidth="120.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="55.0" minWidth="10.0" prefWidth="11.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="109.0" minWidth="10.0" prefWidth="109.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="107.0" minHeight="10.0" prefHeight="105.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="114.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="89.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ComboBox fx:id="Poste_Box" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <JFXPasswordField fx:id="Password_Box" GridPane.columnIndex="1" />
+                        <JFXDatePicker fx:id="DateEmbauche_Box" prefHeight="23.0" prefWidth="109.0" promptText="date du jour" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="lblObg1111" prefHeight="27.0" prefWidth="0.0" text="*" textFill="RED">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblObg1113" prefHeight="27.0" prefWidth="0.0" text="*" textFill="RED" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" layoutX="240.0" layoutY="389.0" prefHeight="50.0" prefWidth="309.0" spacing="50.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#ValiderAjout" prefHeight="31.0" prefWidth="126.0" style="-fx-background-color: #281B3E;" text="Enregistrer" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon fill="#701594" glyphName="SAVE" />
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            <Label fx:id="lblAjoutReussi" layoutX="296.0" layoutY="447.0" opacity="0.0" prefHeight="6.0" prefWidth="152.0" text="Nouvel Employé ajouté" textFill="RED">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblError_message" layoutX="445.0" layoutY="358.0" opacity="0.0" text="ERREUR!!!! Veuillez reprendre" textFill="RED">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="error_label" layoutX="20.0" layoutY="429.0" text="* : le   champ  est  obligatoire" textFill="#ff0202">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <GridPane layoutY="92.0" prefHeight="277.0" prefWidth="177.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="41.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label prefHeight="21.0" prefWidth="102.0" text="  Id Employe :">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="30.0" prefWidth="71.0" text="  Nom :" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="  Prenom :" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="  Sexe :" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="21.0" prefWidth="186.0" text="  Numero Piece Identité :" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="Adresse Residence :" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+      <Pane prefHeight="25.0" prefWidth="729.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Button layoutX="684.0" mnemonicParsing="false" onAction="#fermer" prefHeight="25.0" prefWidth="45.0" styleClass="button3" stylesheets="@../Styles/AccueilDirecteur.css">
+               <graphic>
+                  <FontAwesomeIcon glyphName="REMOVE" size="1.25em" />
+               </graphic>
+            </Button>
+            <Label layoutX="45.0" layoutY="3.0" text="Ajout d'un nouvel employé">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="319.0" prefWidth="563.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projetbd2.AjoutChambreController">
+    <stylesheets>
+        <URL value="@ajoutchambre.css" />
+    </stylesheets>
+   <children>
+      <VBox layoutX="14.0" layoutY="55.0" prefHeight="216.0" prefWidth="115.0" spacing="17.0">
+         <children>
+            <Label text="N° de la chambre *:">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label text="Prix* :">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label text="Type Chambre :">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label text="Remise* :">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label text="Description :">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <TextField fx:id="ACnChambre" layoutX="152.0" layoutY="49.0" />
+      <TextField fx:id="ACPrix" layoutX="152.0" layoutY="85.0" />
+      <TextField fx:id="ACdesc" layoutX="152.0" layoutY="196.0" prefHeight="89.0" prefWidth="298.0" />
+      <ComboBox fx:id="ACtype" layoutX="152.0" layoutY="123.0" prefWidth="150.0" />
+      <ComboBox fx:id="ACremise" layoutX="152.0" layoutY="163.0" prefWidth="150.0" />
+      <Button fx:id="ACenregistrer" layoutX="435.0" layoutY="49.0" mnemonicParsing="false" onAction="#EnregistrerCh" prefHeight="25.0" prefWidth="97.0" stylesheets="@../Styles/AccueilReceptionniste.css" text="Enregistrer" textFill="#fffbfb">
+         <graphic>
+            <FontAwesomeIcon fill="#f2f2f5" glyphName="SAVE" />
+         </graphic>
+      </Button>
+      <Button fx:id="ACannuler" layoutX="435.0" layoutY="85.0" mnemonicParsing="false" onAction="#AnnulerAC" prefHeight="25.0" prefWidth="97.0" stylesheets="@../Styles/AccueilReceptionniste.css" text="Annuler" textFill="#fff9f9">
+         <graphic>
+            <FontAwesomeIcon fill="#f50202" glyphName="CLOSE" />
+         </graphic>
+      </Button>
+      <Label layoutX="24.0" layoutY="4.0" text="Ajouter Chambre">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Line endX="420.0" layoutX="136.0" layoutY="24.0" startX="-130.0" />
+      <Text fx:id="AlertTextprint" fill="#f20b0b" layoutX="60.0" layoutY="311.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Désolé, cette chambre existe déjà  !!!">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="AlertTextvide" fill="#f20b0b" layoutX="60.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Veillez remplir tous les champs * avant d'enregitrer !!">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
